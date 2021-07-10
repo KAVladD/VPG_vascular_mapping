@@ -13,13 +13,12 @@ def freq_number(freq_sequence, freq, n, mark):
         elif freq_sequence[i] > freq:
             return i
 
-# scaled integration by trapezoids
+# unscaled integration by trapezoids
 def integrate(function, variable, b_edge, t_edge):
     integral = 0
     for i in range(b_edge, t_edge):
-        integral += (function[i] + function[i+1]) / 2 * (variable[i+1] - variable[i])
+        integral += (function[i] + function[i+1]) / 2
     return integral 
-
 
 # maximum in array
 def maximum(array, dim0, dim1):
